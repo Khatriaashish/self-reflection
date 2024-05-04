@@ -5,27 +5,59 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 const items = [
   {
     id: 1,
-    title: "React Commerce",
-    img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    title: "Lookscout",
+    img: '/lookscout.png',
+    desc: "Lookscout is website created based on the given Figma Design. Additionally, backend functionality was added. Auth flow was maintained. CMS was designed.",
+    source: "https://github.com/Khatriaashish/talenverse-task"
   },
   {
     id: 2,
-    title: "Next.js Blog",
-    img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    title: "Kishan Saathi",
+    img: '/kishansaathi.png',
+    desc: "Kishan Saathi is advanced digital tool for farmer which is comprised of three sub system; Crop Recommendation, Cure Recommendation, and E-commerce. Based on Random Forest Classifier.",
+    source: "https://github.com/CSIT-final-year-project/Godmel"
   },
   {
     id: 3,
-    title: "Vanilla JS App",
-    img: "https://images.pexels.com/photos/6894528/pexels-photo-6894528.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    title: "Yelp Clone",
+    img: "/yelp.png",
+    desc: "Simple application mimicking Yelp app functionality. PostgresSQL implementation with pg package. Users can add, edit, remove and review resataurant.",
+    source: "https://github.com/Khatriaashish/yelp-clone"
   },
   {
     id: 4,
-    title: "Music App",
-    img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    title: "Taskboard App",
+    img: "/taskboard.png",
+    desc: "Taskboard App develop with MERN. User can assign task with priority level to specific person. Search bar is available to filter task based on assigned, priority level and task. Task can be mark completed or remove from taskboard.",
+    source: "https://github.com/Khatriaashish/Taskboard"
+  },
+  {
+    id: 5,
+    title: "Beyond Social Media App",
+    img: "/beyond.png",
+    desc: "Simple social media app where user can follow each other. Can create a post. View followed user's post. Like Each other post.",
+    source: "https://github.com/Khatriaashish/SocialMediaApp-Beyond"
+  },
+  {
+    id: 6,
+    title: "Movie-Ticketing app",
+    img: "/movie.png",
+    desc: "Node JS project - contains apis of complete movie-ticketing applications.",
+    source: "https://github.com/Khatriaashish/movie-ticketing"
+  },
+  {
+    id: 7,
+    title: "Restro-Management App",
+    img: "/restro.png",
+    desc: "Node JS project - contains apis of complete restaurant applications.",
+    source: "https://github.com/Khatriaashish/restro"
+  },
+  {
+    id: 8,
+    title: "Gharelu Flavors - Food Ordering App",
+    img: "/gharelu.png",
+    desc: "This is a college project of Ecommerce Subject at Sixth Semester made with html, css, js and php. Include CMS to CRUD food and orders.",
+    source: "https://github.com/Khatriaashish/ghareluflavors"
   },
 ];
 
@@ -48,7 +80,7 @@ const Single = ({ item }) => {
           <motion.div className="textContainer" style={{y}}>
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
-            <button>See Demo</button>
+            <a href={item.source} target="_blank"><button>Source Code</button></a>
           </motion.div>
         </div>
       </div>

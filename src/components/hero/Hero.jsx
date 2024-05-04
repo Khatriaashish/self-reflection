@@ -39,6 +39,12 @@ const sliderVariants = {
 };
 
 const Hero = () => {
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      };
     return (
         <div className="hero">
             <div className="wrapper">
@@ -54,11 +60,12 @@ const Hero = () => {
                         MERN Developer
                     </motion.h1>
 
-                    <motion.div variants={textVariants} className="buttons">
-                        <motion.button variants={textVariants}>
-                            See the Latest Works
-                        </motion.button>
-                        <motion.button variants={textVariants}>Contact Me</motion.button>
+                    <motion.div variants={textVariants} className="intro">
+                        <motion.p variants={textVariants} onClick={() => scrollToSection("Portfolio")}>
+                            I am a passionate MERN Developer with an insatiable curiosity for learning and a relentless drive for innovation, 
+                            dedicated to crafting seamless digital experiences through elegant code and creative problem-solving, 
+                            committed to pushing boundaries, embracing challenges, and leaving a positive impact on the world, one line of code at a time.
+                        </motion.p>
                     </motion.div>
 
                     <motion.img
