@@ -84,9 +84,11 @@ const Single = ({ item }) => {
             <a href={item.source} target="_blank">
               <button>Source Code</button>
             </a>
-            <a href={item.live} target="_blank">
-              <button>Live</button>
-            </a>
+            {item.live && (
+              <a href={item.live} target="_blank">
+                <button>Live</button>
+              </a>
+            )}
           </motion.div>
         </div>
       </div>
